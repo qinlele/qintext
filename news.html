@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--HTML5 2014 年10.29-->
+<!--1.文档声明-->
+<!-- html5 之前 以SGML为标准进行的语言定义   HTML5不再采用   声明方式-->
+<!--2. 语法特性  -->
+<!-- 一部分尾标签可以省略  html body li......-->
+<!--单标签  不需要加结束/-->
+<!--属性值可以不用放到引号中-->
+<!--3.标签-->
+<!-- 语义化标签 （header  main footer nav section aside article hgroup figure（放置媒体文件）
+figcaption（媒体文件标题)-->
+<!-- address  time progress-->
+<!-- 功能性标签-->
+<!-- video(视频） audio（音频） source（视频播放需要多个播放源） canvas（画布效果）
+control 控制视频  autoplay（自动播放）-->
+<!-- 4. 属性-->
+<!--hidden直接隐藏  contenteditable(内容可编辑）-->
+<!--draggable是否可拖拽-->
+<!--video  audio: controls 播放控件
+                  autoplay  自动播放
+                  poster  封面图片
+-->
+<!--5.表单-->
+<!-- form input textarea select option label-->
+<!--控件类型
+text password submit  checkbox file(文件域) button reset hidden（隐藏）-->
+    <!--5-1 控件类型 email  year url week  date time datetime-local range number color tel search-->
+    <!--5-2 属性-->
+    <!--form标签
+         action  表单提交的地址
+         method  提交的方式（HTTP方法  GET/POST）
+         enctype  提交内容的数据格式
+    form-data/urlencoded
+         novalidate  在提交的时候不进行验证
+         autocomplete  自动补全/提示
+         name  名字  用来进行选择
+         formaction  实现多个链接的跳转
+    -->
+    <!--表单控件
+         type  控件类型
+         name  用来进行提交
+         value   值
+         readonly  只读（只能提交，不能修改）
+         disabled    禁用（不能提交，不能修改）
+         form    表示当前控件是要提交的表单是哪一个（和form标签的id属性相关联）
+         required     表示当前控件是必填项
+         pattern  用正则进行验证  pattern\d{6，8}最少，最多
+         autofocus  自动获得焦点
+         placeholder 默认提示文字
+          数值类型  (min  max  step）最小值  最大值   步进值(每点一次变动的数值）
+          submit   formaction  formmethod   formenctype   formtarget实现一套表单的多种提交
+    -->
+</body>
+<div>
+    <progress value="50" max="100"></progress>
+</div>
+
+<video>
+    <source src="demo.mp4">
+    <source src="demo.ogg">
+</video>
+<div style="width: 300px;height: 300px;background: red;"contenteditable="true"></div>
+<div style="width: 300px;height: 300px;background: blue;"draggable="true"></div>
+<form action="http://www.baidu.com" id="myform"></form>
+    <ul>
+    <li><input type="file" form="myform"></li>
+    <li><input type="hidden">
+    <li><input type="email" name="n">
+    <li><input type="url" name="w">
+    <li><input type="submit">
+    <li><input type="month" name="m">
+    <li><input type="week" name="w">
+    <li><input type="date">
+    <li><input type="color">
+    <li><input type="time">
+    <li><input type="number" name="num"  placeholder="请输入6到8为" min="0" max="6">
+    <li><input type="search" name="s">
+    <li><input type="tel" name="s">
+    <li><input type="range" name="s">
+
+    </ul>
+<form action="http://www.baidu.com" id="myform"></form>
+    <input type="text" form="myform" placeholder="1233" autofocus required pattern="\d{2,3}">
+    <input type="submit" form="myform">
+    <input type="submit" formaction="https://www.hao123.com/">
+</html>
